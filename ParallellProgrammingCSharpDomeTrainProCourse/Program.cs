@@ -1,7 +1,13 @@
-﻿
-using ParallellProgrammingCSharpDomeTrainProCourse.Samples;
-using ParallellProgrammingCSharpDomeTrainProCourse.Samples.WhenAnyThanksGiving;
+﻿using ParallellProgrammingCSharpDomeTrainProCourse.Samples.ThanksGiving;
 
-//await (new TaskWhenAllExample1().RunAsyncDemo());
 
-await (new TaskWhenAllThanksGivingDemo()).RunAsyncDemo();
+System.Diagnostics.Trace.Listeners.Add(
+    new System.Diagnostics.TextWriterTraceListener(Console.Out)
+);
+
+//await (new TaskWhenAllThanksGivingDemo()).RunAsyncDemo();
+
+await (new TaskWhenAnyThanksGivingDemo()).RunAsyncDemo(); 
+
+
+

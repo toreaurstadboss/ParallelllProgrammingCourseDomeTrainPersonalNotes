@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
-
-namespace ParallellProgrammingCSharpDomeTrainProCourse.Samples.WhenAnyThanksGiving
+﻿namespace ParallellProgrammingCSharpDomeTrainProCourse.Samples.ThanksGiving
 {
     public abstract class Food
     {
@@ -20,11 +15,15 @@ namespace ParallellProgrammingCSharpDomeTrainProCourse.Samples.WhenAnyThanksGivi
             Name = GetType().Name;
         }
 
-        public async Task Cook(CancellationToken token)
+        public async Task<string> Cook(CancellationToken token = default)
         {
-            Trace.WriteLine($"Cooking {Name}");
+            //Trace.AutoFlush = true; 
+            Console.WriteLine($"Cooking {Name}");
+
             await Task.Delay(_cookTime, token);
-            Trace.WriteLine($"{Name} Completed");
+            Console.WriteLine($"{Name} Completed");
+
+            return Name;
         }
 
     }
