@@ -7,7 +7,9 @@ System.Diagnostics.Trace.Listeners.Add(
 
 //await (new TaskWhenAllThanksGivingDemo()).RunAsyncDemo();
 
-await (new TaskWhenAnyThanksGivingDemo()).RunAsyncDemo(); 
+//await (new TaskWhenAnyThanksGivingDemo()).RunAsyncDemo(); 
+
+await (new TaskAwaitForeachWhenEachThanksGivingDemo()).RunAsyncDemo();
 
 
 
